@@ -66,7 +66,7 @@
             return str.toLowerCase();
         },
         major : function (version) {
-            return typeof(version) === STR_TYPE ? version.replace(/[^\d\.]/g,'').split(".")[0] : undefined;
+            return typeof(version) === STR_TYPE ? parseInt(version.replace(/[^\d\.]/g,'').split(".")[0], 10) : undefined;
         },
         trim : function (str) {
           return str.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
